@@ -3,14 +3,14 @@ package h02;
 import java.awt.*;
 import java.applet.*;
 
-public class o01 extends Applet {
+public class Opdracht1 extends Applet {
 
     public void init() {
-        setBackground(Color.magenta);
+        setBackground(Color.blue);
     }
 
     public void paint(Graphics g) {
         g.setColor(Color.yellow);
-        g.drawString("Welcome to Java!!", 50, 60 );
+        g.drawString("Quincy", 50, 60 );
     }
 }
