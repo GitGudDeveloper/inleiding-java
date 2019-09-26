@@ -14,7 +14,9 @@ public class praktijkopdracht extends Applet {
     Button keerknop;
     Button deelknop;
     String s;
-    double getal;
+    int getal1;
+    int getal2;
+
 
 
     public void init() {
@@ -48,9 +50,12 @@ public class praktijkopdracht extends Applet {
 
     private class plusknoplistener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            String s = tekstvak1.getText();
-            getal = Integer.parseInt(s);
-            tekstvak1.setText(String.valueOf((getal + getal)));
+            String s1 = tekstvak1.getText();
+            getal1 = Integer.parseInt(s1);
+            String s2 = tekstvak2.getText();
+            getal2 = Integer.parseInt(s2);
+            tekstvak1.setText(String.valueOf(getal1 + getal2));
+            tekstvak2.setText("");
             repaint();
 
 
@@ -59,19 +64,39 @@ public class praktijkopdracht extends Applet {
 
     private class minknoplistener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            String s1 = tekstvak1.getText();
+            getal1 = Integer.parseInt(s1);
+            String s2 = tekstvak2.getText();
+            getal2 = Integer.parseInt(s2);
+            tekstvak1.setText(String.valueOf(getal1 - getal2));
+            tekstvak2.setText("");
+            repaint();
 
         }
     }
 
     private class keerknoplistener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            String s1 = tekstvak1.getText();
+            getal1 = Integer.parseInt(s1);
+            String s2 = tekstvak2.getText();
+            getal2 = Integer.parseInt(s2);
+            tekstvak1.setText(String.valueOf(getal1 * getal2));
+            tekstvak2.setText("");
+            repaint();
 
         }
     }
 
     private class deelknoplistener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+            String s1 = tekstvak1.getText();
+            getal1 = Integer.parseInt(s1);
+            String s2 = tekstvak2.getText();
+            getal2 = Integer.parseInt(s2);
+            tekstvak1.setText(String.valueOf(getal1 / getal2));
+            tekstvak2.setText("");
+            repaint();
         }
     }
 
