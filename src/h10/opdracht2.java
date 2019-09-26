@@ -48,6 +48,7 @@ public class opdracht2 extends Applet {
                     minlimiet = getal;
                     tekst = String.valueOf(minlimiet);
                 } repaint();
+                
             }
         }
     }
