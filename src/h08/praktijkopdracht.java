@@ -84,7 +84,6 @@ public class praktijkopdracht extends Applet {
             tekstvak1.setText(String.valueOf(getal1 * getal2));
             tekstvak2.setText("");
             repaint();
-            
 
         }
     }
