@@ -14,7 +14,7 @@ public class opdracht2 extends Applet {
     Label label;
     String tekst;
     String tekst2;
-    String excuses;
+    String waarschuwing;
 
     public void init() {
         setSize(700, 400);
@@ -35,7 +35,7 @@ public class opdracht2 extends Applet {
     public void paint(Graphics g) {
         g.drawString("maximum: " + tekst, 50, 50);
         g.drawString("minimum: " + tekst2, 50, 100);
-        g.drawString(excuses, 50, 300);
+        g.drawString(waarschuwing, 50, 300);
     }
 
     class VakListener implements ActionListener {
@@ -52,18 +52,18 @@ public class opdracht2 extends Applet {
             } else {
                 if (ingevoerdgetal > maxlimiet) {
                     maxlimiet = ingevoerdgetal;
-                    excuses = "";
+                    waarschuwing = "";
                     tekst = String.valueOf(maxlimiet);
                     repaint();
 
 
                 }else if (ingevoerdgetal < minlimiet) {
                 minlimiet = ingevoerdgetal;
-                excuses = "";
+                waarschuwing = "";
                 tekst2 = String.valueOf(minlimiet);
                 repaint();
             } else
-                excuses = "het ingevoerde cijfer ligt niet onder het minimum of boven het maximum!";
+                waarschuwing = "het ingevoerde cijfer ligt niet onder het minimum of boven het maximum!";
                 {repaint();}
 
 
