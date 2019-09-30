@@ -14,14 +14,16 @@ public class opdracht2 extends Applet {
     Label label;
     String tekst;
     String tekst2;
+    String excuses;
 
     public void init() {
+        setSize(700, 400);
         tekstvak = new TextField("", 5);
         tekstvak.addActionListener(new VakListener());
         tekst = "";
         tekst2 = "";
 
-        label = new Label("het hoogste cijfer wordt onthouden");
+        label = new Label("alleen het hoogst ingevoerde cijer (maximum) en het laagst ingevoerde cijfer (minimum) worden onthouden");
 
         add(label);
         add(tekstvak);
@@ -33,6 +35,7 @@ public class opdracht2 extends Applet {
     public void paint(Graphics g) {
         g.drawString("maximum: " + tekst, 50, 50);
         g.drawString("minimum: " + tekst2, 50, 100);
+        g.drawString(excuses, 50, 300);
     }
 
     class VakListener implements ActionListener {
@@ -49,15 +52,19 @@ public class opdracht2 extends Applet {
             } else {
                 if (ingevoerdgetal > maxlimiet) {
                     maxlimiet = ingevoerdgetal;
+                    excuses = "";
                     tekst = String.valueOf(maxlimiet);
                     repaint();
 
 
                 }else if (ingevoerdgetal < minlimiet) {
                 minlimiet = ingevoerdgetal;
+                excuses = "";
                 tekst2 = String.valueOf(minlimiet);
                 repaint();
-            } else {repaint();}
+            } else
+                excuses = "het ingevoerde cijfer ligt niet onder het minimum of boven het maximum!";
+                {repaint();}
 
 
 
