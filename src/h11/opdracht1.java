@@ -11,11 +11,11 @@ public class opdracht1 extends Applet {
     public void paint(Graphics g) {
         int teller;
         int x = 0;
-        int tweedeteller;
 
         for(teller = 1; teller < 11; teller++) {
             x += 20;
-            g.drawLine(x , 50, x, 350 );
+            g.drawLine(x, 50, x, 350);
+
         }
 
 
